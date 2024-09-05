@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="h1-id">Anisa</h1>
+    <h1>Kharis</h1>
+    <h1>Denta</h1>
+    <button id="btn-check">Click me!</button>
+    <script>
+
+        let thisTagName = document.getElementsByTagName("h1");
+        let thisIdName = document.getElementById("h1-id")
+        // console.log(thisTagName, "== ini tag")
+        // console.log(thisIdName, "== ini id")
+
+        thisIdName.style.color = "red";
+
+        let buttonCheck = document.getElementById("btn-check")
+        buttonCheck.addEventListener("click", () => {
+            console.log("Coba button")
+        });
+
+        // console.log(this);
+
+    </script>
+</body>
+
+</html>
