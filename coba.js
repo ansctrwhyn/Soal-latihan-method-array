@@ -147,19 +147,19 @@
 // person.increment();
 // console.log(person.age);
 
-let goToMarket = (uang, barang, harga, callback) => {
-    if (uang > harga){
-        let kembalianUang = uang - harga;
-        console.log("Berhasil beli " + barang);
-        callback(kembalianUang);
-    }
-}
+// let goToMarket = (uang, barang, harga, callback) => {
+//     if (uang > harga){
+//         let kembalianUang = uang - harga;
+//         console.log("Berhasil beli " + barang);
+//         callback(kembalianUang);
+//     }
+// }
 
-let shopping = (userMoney) => {
-    goToMarket(userMoney, "Shampoo", 20000, (uang) => {
-        console.log(uang, "==> sisa uang")
-    })
-} 
+// let shopping = (userMoney) => {
+//     goToMarket(userMoney, "Shampoo", 20000, (uang) => {
+//         console.log(uang, "==> sisa uang")
+//     })
+// } 
 
 // let shopping = (userMoney) => {
 //     goToMarket(userMoney, "Shampoo", 20000, (uang) => {
@@ -169,4 +169,20 @@ let shopping = (userMoney) => {
 //     })
 // } 
 
-shopping(100000)
+// shopping(100000)
+
+const myNumbers = [4, 1, -20, -7, 5, 9, -6];
+
+const posNumbers = removeNeg(myNumbers, (x) => x >= 0);
+
+function removeNeg(numbers, callback) {
+  const myArray = [];
+  for (const x of numbers) {
+    if (callback(x)) {
+      myArray.push(x);
+    }
+  }
+  return myArray;
+}
+
+console.log(posNumbers)
